@@ -1,0 +1,49 @@
+# Ethereum Classic Documentation Website Generator
+
+Structure
+---------
+
+* `SiteConfig.groovy` - configuration
+* `theme` - compiled site theme (UI design & elements)
+* `theme-src` - theme sources (`node build-theme.js`)
+* `content` - website content
+
+
+How to Use
+----------
+
+### Setup
+
+Install:
+
+ * nodejs & npm - https://nodejs.org/
+ * gradle - https://gradle.org/install
+
+### Prepare UI Theme
+
+----
+npm install
+gradle buildTheme
+----
+
+### Download ECIPs content
+
+----
+git submodule init
+git submodule update
+----
+
+or you can simply `git clone` with `--recursive` option
+
+### Preview Website on localhost
+
+----
+gradle preview
+----
+
+Open: http://localhost:4000
+
+Edit content
+------------
+
+Look at `content` dir

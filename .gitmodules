@@ -1,0 +1,3 @@
+[submodule "content/ECIPs"]
+	path = content/ECIPs
+	url = git@github.com:ethereumproject/ECIPs.git

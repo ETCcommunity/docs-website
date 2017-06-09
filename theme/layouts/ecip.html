@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+${include 'header.html'}
+<body>
+${include 'navbar.html'}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="page-header">
+                <h1>${page.title}</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            ${content}
+        </div>
+    </div>
+    <div class="row ecip-footer">
+        <div class="col-xs-12">
+            <i class="fa fa-github"></i> <a href="${page.github_url}">Open on Github</a>
+        </div>
+    </div>
+</div>
+</body>

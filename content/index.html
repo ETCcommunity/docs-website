@@ -1,0 +1,71 @@
+---
+layout: default
+title: ETC DOCS
+published: true
+---
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-header">
+                <h1>Ethereum Classic Documentation</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>ECIPs <small>Ethereum Classic Improvement Proposals</small></h1>
+            <table class="table">
+                <tbody>
+                <% site.pages.findAll{ it.ecip }.each { page -> %>
+                <tr>
+                    <td>
+                        <% if (page.ecip_status == 'Accepted' || page.ecip_status == 'Final') { %>
+                        <label class="label label-success">${page.ecip_status}</label>
+                        <% } else if (page.ecip_status == 'Rejected') { %>
+                        <label class="label label-danger">${page.ecip_status}</label>
+                        <% } else if (page.ecip_status == 'Withdrawn' || page.ecip_status == 'Superseded') { %>
+                        <label class="label label-warning">${page.ecip_status}</label>
+                        <% } else { %>
+                        <label class="label label-default">${page.ecip_status}</label>
+                        <% } %>
+
+                    </td>
+                    <td>ECIP-${page.ecip_id}</td>
+                    <td><a href="${page.url}">${page.ecip_title}</a></td>
+                    <td><a href="${page.github_url}"><i class="fa fa-github"></i></a></td>
+                </tr>
+                <% } %>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-12">
+            <h2>How to Submit Proposal</h2>
+            <p>Ethereum Classic Improvement Proposals (ECIPs), are technical write-ups that describe suggested changes 
+                to the Ethereum Protocol. Finalized proposals agreed up by volunteer client developers, and the users 
+                of the Ethereum Classic main net blockchain are implemented by Ethereum Classic client developers.</p>
+            <p>
+                To submit a proposal please go to <a href="https://github.com/ethereumproject/ECIPs">ECIPs GitHub</a>
+                read <a href="https://github.com/ethereumproject/ECIPs/blob/master/ECIP-0000.md.sample">Example Proposal</a>
+                and create a Pull Request with your idea. You can also start with simple Issue if you want to discuss
+                a possible proposal before submitting.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>RFCs</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Articles &amp; Tutorial</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Other documents</h1>
+        </div>
+    </div>
+
+
+</div>
